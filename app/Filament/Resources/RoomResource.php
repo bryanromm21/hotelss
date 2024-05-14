@@ -12,7 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-
+use Filament\Forms\Components\Select;
 class RoomResource extends Resource
 {
     protected static ?string $model = Room::class;
@@ -32,15 +32,22 @@ class RoomResource extends Resource
                 Forms\Components\TextInput::make('rooms_price')
                     ->required()
                     ->numeric(),
-                Forms\Components\TextInput::make('rooms_type')
-                    ->required()
-                    ->maxLength(255),
+                    Forms\Components\Select::make('rooms_type')
+                    ->options([
+                        'marimonial' => 'Matrimonial',
+                        'individual' => 'Individual',
+                        'doble' => 'Doble',
+                    ]),
                 Forms\Components\TextInput::make('capacity')
                     ->required()
                     ->numeric(),
-                Forms\Components\TextInput::make('state')
-                    ->required()
-                    ->maxLength(255),
+                    Forms\Components\Select::make('state')
+                    ->multiple()
+                    ->options([
+                        'limpio'=>'Limpio',
+                        'sucio'=>'Sucio',
+                        'mantenimiento'=>'Mantenimiento',
+                    ]),
             ]);
     }
 

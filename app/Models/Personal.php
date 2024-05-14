@@ -15,4 +15,13 @@ class Personal extends Model
     public function activities(){
         return $this->hasMany(activity::class, 'id');
     }
+    public function Lost () {
+        return $this->hasMany(Lost::class, 'id');
+    }
+    public function LostReports () {
+        return $this->hasMany(LostReports::class, 'id');
+    }
+   
 }
+
+

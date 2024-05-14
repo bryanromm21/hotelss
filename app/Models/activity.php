@@ -15,4 +15,8 @@ class activity extends Model
     public function rooms(){
         return $this->belongsTo(room::class, 'rooms_id');
     }
+    protected $casts =[
+        
+        'state'  => 'array',
+    ];
 }
