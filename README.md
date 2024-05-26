@@ -6,6 +6,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+## como funciona
 insertar el siguiente código en terminal para crear usuario php artisa make:filament-user
 insertarvest comando para activar la vista de la subida de imágenes php storage:link
 ## About Laravel
